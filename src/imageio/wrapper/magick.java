@@ -6,9 +6,8 @@ import java.util.ArrayList;
 //The ImageMagick implementation for reading image files
 public class magick {
   //Read an 8bit image
-  public Image readImage8(String imagePath, int width, int height) {
-    String[] cmd = new String[]{"magick", imagePath, "rgba:-"};
-    byte[] pixelStream = process.runProcess_stdout(cmd);
+  public static Image readImage8(String imagePath, int width, int height) {
+    byte[] pixelStream = process.runProcess_stdout("magick", imagePath, "rgba:-");
     
     var pixels = new ArrayList<RGBA8>(); 
     for (int i = 0; i < pixelStream.length;) {

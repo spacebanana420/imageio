@@ -1,7 +1,6 @@
 package imageio.image;
 
-//Image class that supports different bit depths and channels
-//Image objects represent an image, holding all of its pixel data as well as width, hight and bit depth (per channel)
+//Image objects represent an image, holding all of its pixel data as well as width, height and bit depth (per channel)
 //Has very slight CPU and memory overhead but it's very convenient to use
 public class Image {
   public int width;
