@@ -56,6 +56,7 @@ public class Image {
   }
 
   //Returns an array representing respectively red, green, blue and alpha channels
+  //TODO: clone pixels instead of returning a reference to the original ones?
   public RGBA8 getPixel8(int x, int y) {
     if (this.depth != 8) return null;
     int i = getPixelIndex(x, y);
