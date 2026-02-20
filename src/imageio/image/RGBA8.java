@@ -44,8 +44,5 @@ public class RGBA8 {
   }
 
   //Convert a signed byte into unsigned
-  private static short toUnsigned(byte number) {
-    if (number > 0) return number;
-    return (short)(256+number);
-  }
+  private static short toUnsigned(byte number) {return (short)(number & 255);}
 }

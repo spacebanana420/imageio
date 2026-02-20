@@ -3,11 +3,18 @@ import imageio.wrapper.*;
 
 public class frogtest {
   public static void main(String[] args) {
+    autoTest();
+    
     System.out.println("Testing 8bit image");
     pixelTest8();
 
     System.out.println("Testing 16bit image");
     pixelTest16();
+  }
+
+  static void autoTest() {
+    Image frog = magick.readImage("frog.png");
+    System.out.println("WIDTH " + frog.width + "\nHEIGHT " + frog.height + "\nDEPTH " + frog.depth + "\n");
   }
 
   static void pixelTest8() {
