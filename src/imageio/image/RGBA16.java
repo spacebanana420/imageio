@@ -7,6 +7,13 @@ public class RGBA16 {
   public short blue;
   public short alpha;
 
+  public RGBA16(RGBA16 pixel) {
+    this.red = pixel.red;
+    this.green = pixel.green;
+    this.blue = pixel.blue;
+    this.alpha = pixel.alpha;
+  }
+
   public RGBA16(short red, short green, short blue, short alpha) {
     this.red = red;
     this.green = green;
@@ -20,6 +27,11 @@ public class RGBA16 {
     this.blue = (short)blue;
     this.alpha = (short)alpha;
   }
+
+  public int red() {return toUnsigned(this.red);}
+  public int green() {return toUnsigned(this.green);}
+  public int blue() {return toUnsigned(this.blue);}
+  public int alpha() {return toUnsigned(this.alpha);}
   
   //Returns an array representing respectively red, green, blue and alpha channels
   public int[] getChannels() {

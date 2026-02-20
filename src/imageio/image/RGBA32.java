@@ -7,6 +7,13 @@ public class RGBA32 {
   public int blue;
   public int alpha;
 
+  public RGBA32(RGBA32 pixel) {
+    this.red = pixel.red;
+    this.green = pixel.green;
+    this.blue = pixel.blue;
+    this.alpha = pixel.alpha;
+  }
+
   public RGBA32(int red, int green, int blue, int alpha) {
     this.red = red;
     this.green = green;
@@ -20,6 +27,11 @@ public class RGBA32 {
     this.blue = (int)blue;
     this.alpha = (int)alpha;
   }
+
+  public long red() {return toUnsigned(this.red);}
+  public long green() {return toUnsigned(this.green);}
+  public long blue() {return toUnsigned(this.blue);}
+  public long alpha() {return toUnsigned(this.alpha);}
   
   //Returns an array representing respectively red, green, blue and alpha channels
   public long[] getChannels() {
