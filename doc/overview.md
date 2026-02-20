@@ -1,14 +1,14 @@
 # imageio Overview
 
-imageio is a library for reading and writing image files of various formats. This is a wrapper library and depends on ImageMagick being installed in your system to work.
+imageio is a Java library for reading and writing image files of various formats. This is a wrapper library and depends on ImageMagick being installed in your system to work.
 
-imageio runs ImageMagick as a subprocess to direclty retrieve the raw pixel stream of an image from standard output, to then save it in a Java class. You can read an image with the functions found in the `imageio.wrapper.magick` class.
+imageio runs ImageMagick as a subprocess to directly retrieve the raw pixel stream of an image from standard output, to then save it as a Java class. You can read an image with the functions found in the `imageio.wrapper.magick` class.
 
 Once read, the image is returned as an `Image` object, a simple class which contains the width, height, bit depth and raw pixel data of an image. For simplicity, all images are read as RGBA regardless if they have an alpha channel or not. For convenience, pixels are represented as an `RGBA8`, `RGBA16` or `RGBA32` class. These classes let you view and modify the color channels of red, green, blue and alpha of a pixel. Color values can be read as signed (`byte` for 8bit) or unsigned (`short` for 8bit). You can also modify an image's pixels.
 
 ## Setting up imageio and using it in your project
 
-You can directly add the source code of imageio and import it from your own, or download the latest library JAR found in the releases page and also import it.
+You can directly add the source code of imageio and import it from your own, or download the latest library JAR found in the releases page and also import it. imageio is built with Java 11 specification, and so it requires Java version 11 or higher.
 
 imageio depends on [ImageMagick](https://imagemagick.org/) to work. This program must be installed in your system (in your `$PATH` environment variable on UNIX, or `%PATH%` on Windows). imageio itself is platform-agnostic, it will run on any platform ImageMagick also runs on, which is pretty much everything.
 
