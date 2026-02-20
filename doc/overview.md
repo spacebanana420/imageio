@@ -40,7 +40,7 @@ RGBA8 pixel = image.getPixel8(30, 60); //Get pixel at coordinates X=30, Y=60
 
 //Now you can retrieve the individual color values of a pixel
 byte red = pixel.red; //Signed 8bit value, between -128 and 127
-short unsigned_red = pixel.red(); //Unsigned 8bit value, between 0 and 256
+short unsigned_red = pixel.red(); //Unsigned 8bit value, between 0 and 255
 
 //Trying to retrieve pixels of a different bit depth will result in null value
 RGBA16 pixel = image.getPixel16(30, 60); //Returns null because the image's bit depth is 8 and not 16
